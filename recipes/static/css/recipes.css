@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300&display=swap');
+
+#blue-text1 {
+    color: #2aa095;
+}
+
+#blue-text2 {
+    color: #008F8C;
+}
+
+#orange-text {
+    color: #ffd39d;
+}
+
+.blue1-background {
+    background-color: #2aa095;
+}
+
+.blue2-background {
+    background-color: #008F8C;
+}
+
+.lightblue-background {
+    position: relative;
+    z-index: 1;
+}
+
+.lightblue-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .6;
+    z-index: -1;
+    background-color: #f5fffd;
+    background-image: url("https://www.creativefabrica.com/wp-content/uploads/2021/10/29/Abstract-Watercolor-Background-Design-Graphics-19383757-1.jpg");
+}
+
+.orange-table tr:nth-child(even) {
+    background-color: #f8e5cd;
+}
+
+.grid-container {
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    align-items: center;
+    justify-items: center;
+    margin: 50px 100px 350px;
+}
+
+.grid-container2 {
+    margin: 10px 16px 150px;
+}
+
+.perspective {
+    perspective: 500px;
+}
+
+.box {
+    padding: 2em;
+    position: relative;
+    transition: transform 300ms;
+}
+
+.box:hover {
+    transform: scale(1.1);
+}
+
+.small-text {
+    font-size: 0.8125rem;
+}
+
+.center-align {
+    text-align: center;
+}
+
+.div-center {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 50px;
+    box-shadow: #2aa095 0px 0px 0px 3px;
+    width: 33%;
+    margin: 50px 100px 460px;
+}
+
+.container2 {
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 50px;
+    box-shadow: #2aa095 0px 0px 0px 3px;
+    width: 500px;
+    margin: 50px 100px 555px;
+}
+
+.container3 {
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 50px;
+    box-shadow: #2aa095 0px 0px 0px 3px;
+    width: 500px;
+    margin: 50px 100px 665px;
+}
+
+.blue-text {
+    color: #008F8C;
+}
+
+.p-padding {
+    padding: 20px;
+}
+
+.button-style {
+    font-family: inherit;
+    background-color: #ffd39d;
+    border: 2px solid #249696;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.nav-right {
+    float: right;
+}
+
+.font-bolder {
+    font-weight: 900;
+}
+
+.normal-font {
+    font-size: 16px;
+}
+
+.nav-padding {
+    margin: 0;
+    padding: 0px 15px 0px 10px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.no-margin {
+    margin: 0;
+    padding: 0;
+}
+
+.margin-bottom-only {
+    margin: 0 0 8px 0;
+}
+
+.margin-top-only {
+    margin: 4px 0 0 0;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.larger-image {
+    width: 550px;
+    height: 550px;
+}
+
+.center-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav a {
+    margin: 0;
+    padding: 0px 15px 0px 10px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Serif Pro', serif;
+}
+
+main {
+    padding: 16px;
+}
+
+footer {
+    padding: 24px 0px 24px 16px;
+    font-size: medium;
+}
+
+img {
+    object-fit: cover;
+    height: 200px;
+    width: 200px;
+    border-radius: 5%;
+}
+
+nav {
+    padding: 20px;
+    box-shadow: 1.95px 1.95px 1.95px #9ddbd5;
+}
+
+a {
+    color: #f8e5cd;
+    text-decoration: none;
+}
+
+a:hover {
+    color: green;
+}
+
+th {
+    font-size: medium;
+}
+
+ol li {
+    font-size: 16px;
+}
+
+input[type=text],
+input[type=url],
+input[type=number],
+input[type=password],
+textarea {
+    border: 1px solid #148282;
+    border-radius: 5px;
+    padding: 10px;
+    width: 90%;
+    font-family: 'Source Serif Pro', serif;
+}
+

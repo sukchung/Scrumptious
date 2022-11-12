@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}
+    Scrumptious Recipes
+{% endblock title %}
+{% block content %}
+    <header>
+        <nav class="blue1-background">
+            <a href="{% url 'main_page' %}">Main Page</a>
+            {% if user.is_authenticated %}
+                <a href="{% url 'my_recipe_list' %}">My Recipes</a>
+                <a href="{% url 'create_recipe' %}">Create a Recipe</a>
+                <div class="nav-right">
+                    <a href="{% url 'user_logout' %}">Log out</a>
+                </div>
+                <div class="nav-right font-bolder">
+                    <p class="nav-padding">Hello, {{ user.username }}</p>
+                </div>
+            {% else %}
+                <a class="nav-right" href="{% url 'user_login' %}">Log in</a>
+                <a class="nav-right" href="{% url 'signup' %}">Sign up</a>
+            {% endif %}
+        </nav>
+    </header>
+    <main>
+        <h1 id="blue-text1" class="center-align">Scrumptious Recipes</h1>
+        <h2 class="center-align">All the food that's fit to eat</h2>
+        <div class="grid-container">
+            {% for recipe in recipe_list %}
+                <div class="box">
+                    <h3 class="center-align">
+                        <a id="blue-text2" href="{% url 'show_recipe' recipe.id %}">{{ recipe.title }}</a>
+                    </h3>
+                    <p class="small-text">Created on {{ recipe.created_on|date:"N j, Y" }}</p>
+                    <a href="{% url 'show_recipe' recipe.id %}">
+                        <img src="{{ recipe.picture }}" alt="{{ recipe.title }}">
+                    </a>
+                    {% if recipe.rating <= 5 and recipe.rating >= 1 %}
+                        <div style="font-size: 13px;">⭐ {{ recipe.rating }}</div>
+                    {% else %}
+                        <div style="font-size: 13px;">No rating</div>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+    </main>
+{% endblock content %}
